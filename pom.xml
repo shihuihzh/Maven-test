@@ -33,13 +33,28 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-release-plugin</artifactId>-->
+                <!--<version>2.5.3</version>-->
+                <!--<configuration>-->
+                    <!--<tagNameFormat>v@{project.version}</tagNameFormat>-->
+                    <!--<autoVersionSubmodules>true</autoVersionSubmodules>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.3</version>
+                <groupId>com.github.danielflower.mavenplugins</groupId>
+                <artifactId>multi-module-maven-release-plugin</artifactId>
+                <version>2.0.9</version>
                 <configuration>
-                    <tagNameFormat>v@{project.version}</tagNameFormat>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <releaseGoals>
+                        <releaseGoal>clean</releaseGoal>
+                        <releaseGoal>deploy</releaseGoal>
+                    </releaseGoals>
+                    <releaseProfiles>
+                        <releaseProfile>release</releaseProfile>
+                        <releaseProfile>gpg</releaseProfile>
+                    </releaseProfiles>
                 </configuration>
             </plugin>
         </plugins>
