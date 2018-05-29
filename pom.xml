@@ -18,8 +18,9 @@
     <scm>
         <connection>scm:git:git@github.com:shihuihzh/Maven-test.git</connection>
         <url>https://github.com/shihuihzh/Maven-test</url>
-        <developerConnection>scm:git@github.com:shihuihzh/Maven-test.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:shihuihzh/Maven-test.git</developerConnection>
     </scm>
+
 
 
     <!--构建配置-->
