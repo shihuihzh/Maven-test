@@ -1,82 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.hzh.maven</groupId>
-    <artifactId>Maven-test</artifactId>
-    <packaging>pom</packaging>
-    <version>1.2-SNAPSHOT</version>
-
-    <modules>
-        <module>mvn-sub-p1</module>
-        <module>mvn-sub-p2</module>
-    </modules>
-
-    <!--git 远程仓库配置-->
-    <scm>
-        <connection>scm:git:git@github.com:shihuihzh/Maven-test.git</connection>
-        <url>https://github.com/shihuihzh/Maven-test</url>
-        <developerConnection>scm:git:git@github.com:shihuihzh/Maven-test.git</developerConnection>
-      <tag>HEAD</tag>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.hzh.maven</groupId>
+  <artifactId>Maven-test</artifactId>
+  <version>1.2.3</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>mvn-sub-p1</module>
+    <module>mvn-sub-p2</module>
+  </modules>
+  <scm>
+    <connection>scm:git:git@github.com:shihuihzh/Maven-test.git</connection>
+    <developerConnection>scm:git:git@github.com:shihuihzh/Maven-test.git</developerConnection>
+    <url>https://github.com/shihuihzh/Maven-test</url>
   </scm>
-
-
-
-    <!--构建配置-->
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-            <!--<plugin>-->
-                <!--<groupId>org.apache.maven.plugins</groupId>-->
-                <!--<artifactId>maven-release-plugin</artifactId>-->
-                <!--<version>2.5.3</version>-->
-                <!--<configuration>-->
-                    <!--<tagNameFormat>v@{project.version}</tagNameFormat>-->
-                    <!--<autoVersionSubmodules>true</autoVersionSubmodules>-->
-                <!--</configuration>-->
-            <!--</plugin>-->
-            <plugin>
-                <groupId>com.github.danielflower.mavenplugins</groupId>
-                <artifactId>multi-module-maven-release-plugin</artifactId>
-                <version>2.2.0</version>
-                <configuration>
-                    <releaseGoals>
-                        <releaseGoal>clean</releaseGoal>
-                        <releaseGoal>deploy</releaseGoal>
-                    </releaseGoals>
-                    <releaseProfiles>
-                        <releaseProfile>release</releaseProfile>
-                        <releaseProfile>gpg</releaseProfile>
-                    </releaseProfiles>
-
-                    <serverId>deploymentRepo</serverId>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-    <!--分发配置-->
-    <distributionManagement>
-        <repository>
-            <id>deploymentRepo</id>
-            <name>releases</name>
-            <url>http://localhost:8081/repository/maven-releases/</url>
-            <uniqueVersion>true</uniqueVersion>
-        </repository>
-        <snapshotRepository>
-            <id>deploymentRepo</id>
-            <name>snapshots</name>
-            <url>http://localhost:8081/repository/maven-snapshots/</url>
-            <uniqueVersion>true</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
-
-
+  <distributionManagement>
+    <repository>
+      <id>deploymentRepo</id>
+      <name>releases</name>
+      <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>deploymentRepo</id>
+      <name>snapshots</name>
+      <url>http://localhost:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.github.danielflower.mavenplugins</groupId>
+        <artifactId>multi-module-maven-release-plugin</artifactId>
+        <version>2.2.0</version>
+        <configuration>
+          <releaseGoals>
+            <releaseGoal>clean</releaseGoal>
+            <releaseGoal>deploy</releaseGoal>
+          </releaseGoals>
+          <releaseProfiles>
+            <releaseProfile>release</releaseProfile>
+            <releaseProfile>gpg</releaseProfile>
+          </releaseProfiles>
+          <serverId>deploymentRepo</serverId>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
