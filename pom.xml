@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.hzh.maven</groupId>
   <artifactId>Maven-test</artifactId>
-  <version>1.2.5.1</version>
+  <version>1.2.5-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
     <module>mvn-sub-p1</module>

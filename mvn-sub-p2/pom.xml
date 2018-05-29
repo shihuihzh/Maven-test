@@ -5,8 +5,8 @@
   <parent>
     <groupId>com.hzh.maven</groupId>
     <artifactId>Maven-test</artifactId>
-    <version>1.2.5.1</version>
+    <version>1.2.5-SNAPSHOT</version>
   </parent>
   <artifactId>mvn-sub-p2</artifactId>
-  <version>4.2.4.1</version>
+  <version>4.2.4-SNAPSHOT</version>
 </project>
