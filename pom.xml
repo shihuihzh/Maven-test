@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hzh.maven</groupId>
     <artifactId>Maven-test</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
 
     <modules>
         <module>mvn-sub-p1</module>
@@ -13,17 +15,11 @@
     </modules>
 
     <!--git 远程仓库配置-->
-    <!--<scm>-->
-        <!--<connection>scm:git:git@github.com:shihuihzh/Maven-test.git</connection>-->
-        <!--<url>https://github.com/shihuihzh/Maven-test</url>-->
-        <!--<developerConnection>scm:git@github.com:shihuihzh/Maven-test.git</developerConnection>-->
-    <!--</scm>-->
     <scm>
-        <connection>scm:git:http://git-local.bnz.com/srv/bnz-ep.git</connection>
-        <url>http://git-local.bnz.com/srv/bnz-ep</url>
-        <developerConnection>scm:git:http://git-local.bnz.com/srv/bnz-ep.git</developerConnection>
-      <tag>v1.0</tag>
-  </scm>
+        <connection>scm:git:git@github.com:shihuihzh/Maven-test.git</connection>
+        <url>https://github.com/shihuihzh/Maven-test</url>
+        <developerConnection>scm:git@github.com:shihuihzh/Maven-test.git</developerConnection>
+    </scm>
 
 
     <!--构建配置-->
