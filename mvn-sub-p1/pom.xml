@@ -5,15 +5,15 @@
   <parent>
     <groupId>com.hzh.maven</groupId>
     <artifactId>Maven-test</artifactId>
-    <version>1.2.5</version>
+    <version>1.2.5.1</version>
   </parent>
   <artifactId>mvn-sub-p1</artifactId>
-  <version>1.2.3</version>
+  <version>1.2.3.11</version>
   <dependencies>
     <dependency>
       <groupId>com.hzh.maven</groupId>
       <artifactId>mvn-sub-p2</artifactId>
-      <version>4.2.4</version>
+      <version>4.2.4.1</version>
     </dependency>
   </dependencies>
 </project>
