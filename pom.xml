@@ -55,10 +55,14 @@
                         <releaseProfile>release</releaseProfile>
                         <releaseProfile>gpg</releaseProfile>
                     </releaseProfiles>
+
+                    <serverId>deploymentRepo</serverId>
                 </configuration>
             </plugin>
         </plugins>
-    </build> <!--分发配置-->
+    </build>
+
+    <!--分发配置-->
     <distributionManagement>
         <repository>
             <id>deploymentRepo</id>
