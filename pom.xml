@@ -5,7 +5,7 @@
     <groupId>com.hzh.maven</groupId>
     <artifactId>Maven-test</artifactId>
     <packaging>pom</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
 
     <modules>
         <module>mvn-sub-p1</module>
@@ -17,7 +17,7 @@
         <connection>scm:git:git@github.com:shihuihzh/Maven-test.git</connection>
         <url>https://github.com/shihuihzh/Maven-test</url>
         <developerConnection>scm:git:git@github.com:shihuihzh/Maven-test.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>v1.1</tag>
   </scm>
 
 
